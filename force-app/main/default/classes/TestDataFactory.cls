@@ -31,4 +31,21 @@ public without sharing class TestDataFactory {
 
         return oppList;
     }
+
+
+    public static List<Case> makeCaseData()
+    {
+        List<Case> caseList = new List<Case>();
+        for(Integer i=0;i<=99;i++)
+        {
+            Case cs = new Case();
+            cs.Subject='test Case '+i;
+            cs.status='Working';
+            cs.Origin = 'Web';
+            caseList.add(cs);
+        }
+        insert caseList;
+
+        return caseList;  
+    }
 }
